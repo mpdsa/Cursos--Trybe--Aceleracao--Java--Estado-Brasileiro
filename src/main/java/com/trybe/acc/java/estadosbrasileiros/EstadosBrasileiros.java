@@ -2,9 +2,13 @@ package com.trybe.acc.java.estadosbrasileiros;
 
 import java.util.Random;
 
+/**
+ * Classe Estado Brasileiro.
+ *
+ */
 public class EstadosBrasileiros {
   /**
-   * Método principal para a execuçao do código.
+   * Método principal para a execução do código.
    * 
    */
   public static void main(String[] args) {
@@ -16,8 +20,24 @@ public class EstadosBrasileiros {
     mostraNomeEstado(siglas[pos]);
   }
 
+  static String estadoBrasileiro = "";
+  
   static void mostraNomeEstado(String uf) {
-    // Seu código aqui
+    switch (uf) {
+      case "CE":
+        estadoBrasileiro = "CEARA";
+        break;
+      case "SC":
+        estadoBrasileiro = "SANTA CATARINA";
+        break;
+      case "AM":
+        estadoBrasileiro = "AMAZONAS";
+        break;
+      default:
+        System.out.print("Defina um estado do brasil.");
+    }
+    
+    System.out.println(estadoBrasileiro);
   }
 
   // Chame a função escrevendo `imprime()`.
